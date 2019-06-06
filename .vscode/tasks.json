@@ -12,11 +12,25 @@
             "problemMatcher": "$tsc"
         },
         {
+            "label": "restore",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "restore",
+                "${workspaceFolder}/CodeNames.csproj"
+            ],
+            "problemMatcher": "$tsc"
+        },
+        {
             "label": "publish",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "publish",
+                "-c",
+                "Release",
+                "-r",
+                "win10-x64",
                 "${workspaceFolder}/CodeNames.csproj"
             ],
             "problemMatcher": "$tsc"
